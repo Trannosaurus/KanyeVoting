@@ -24,15 +24,18 @@ app.listen(port, async () => {
 })
 
 app.get('/', async (req,res) => {
-    let data = await fetch("https://api.kanye.rest")
-        .then(rsp => rsp.json())
-        .catch(err => console.error(err))
-    let quote1 = data.quote
-    data = await fetch("https://api.kanye.rest")
-        .then(rsp => rsp.json())
-        .catch(err => console.error(err))
-    let quote2 = data.quote
-    res.render("index", {quote1, quote2})
+    try{
+        let data = await fetch("https://api.kanye.rest")
+            .then(rsp => rsp.json())
+            .catch(err => console.error(err))
+        let quote1 = data.quote
+        data = await fetch("https://api.kanye.rest")
+            .then(rsp => rsp.json())
+            .catch(err => console.error(err))
+        let quote2 = data.quote
+        res.render("index", {quote1, quote2})
+    }catch {
+    }
 })
 
 app.post('/', async (req,res) => {
