@@ -42,7 +42,6 @@ app.post('/', async (req,res) => {
     const quote = req.body.quote
     const db = client.db(process.env.MONGO_DB_NAME)
     const collection = db.collection(process.env.MONGO_COLLECTION)
-    console.log("In POST>>> " + quote);
     /*
     await collection.findOneAndUpdate({key: quote}, (found) => {
         { $set: {count: found? found.count: 1}}
@@ -56,6 +55,5 @@ app.get('/leaderboard', async (req,res) => {
     const db = client.db(process.env.MONGO_DB_NAME)
     const collection = db.collection(process.env.MONGO_COLLECTION)
     let quotes = await collection.find({quote: {$exists: true}}).toArray()
-    console.log("QUOTES>>> " + quotes)
     res.render("leaderboard", {quotes})
 })
