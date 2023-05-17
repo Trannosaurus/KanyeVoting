@@ -2,6 +2,8 @@
 
 made by An Tran, and Gandhar Viragi
 
+[![Video Title](https://img.youtube.com/vi/Llw-lvPcWy4/0.jpg)](https://www.youtube.com/watch?v=Llw-lvPcWy4)
+
 This project allows users to retrieve Kanye West quotes from the [Kanye Quotes API](https://kanye.rest/) and vote on them.
 
 ## Getting Started
