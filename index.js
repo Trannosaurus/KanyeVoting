@@ -16,7 +16,8 @@ app.use(bodyParser.json());
 const uri = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@cmsc335.1tnl8cj.mongodb.net/?retryWrites=true&w=majority`
 const client = new MongoClient(uri)
 
-app.listen(3000, async () => {
+const port = process.env.PORT || 3000
+app.listen(port, async () => {
     console.log(`Server started running at http://localhost:3000`)
     // await client.connect()
     // console.log('Connected to MongoDB')
