@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/tailwind.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <a class="w-full text-lg absolute text-right p-3"href="/leaderboard">Leaderbord</a>
+        <form id="form" action="/" method="post" class="flex flex-col h-screen justify-center items-center">
+            <h1 class="my-10 text-3xl">Choose the better Ye quote</h1>
+            <div class="h-1/2 flex items-center justify-center">
+                <button name="quote" value="<%-quote1%>" type="submit" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 m-3 w-1/4 text-center text-xl "><%= quote1 %></button>
+                <button name="quote" value="<%-quote2%>" type="submit" class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 m-3 w-1/4 text-center text-xl "><%= quote2 %></button>
+            </div>
+        </form>
+    </body>
+</html>
